@@ -1,11 +1,19 @@
 export const analyzeResultSchema = {
     type: 'object',
     additionalProperties: false,
-    required: ['summary', 'tasks', 'events'],
+    required: ['summary', 'tasks', 'events', 'title', 'sourceType'],
     properties: {
         summary: {
             type: "string",
             description: "Short summary of the input text"
+        },
+        title: {
+            type: "string",
+            description: "Short title for the analysis"
+        },
+        sourceType: {
+            type: "string",
+            description: "Type of the source text"
         },
         tasks: {
             type: "array",

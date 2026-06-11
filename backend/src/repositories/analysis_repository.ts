@@ -6,6 +6,8 @@ const prisma = new PrismaClient();
 export const saveAnalysis = async (result: AnalyzeResult, inputText: string) => {
     return prisma.analysis.create({
         data: {
+            title: result.title,
+            sourceType: result.sourceType,
             inputText,
             summary: result.summary,
             tasks: JSON.parse(JSON.stringify(result.tasks)),

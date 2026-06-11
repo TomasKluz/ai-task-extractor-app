@@ -19,6 +19,14 @@ export const analyzeTextWithAI = async (text: string): Promise<AnalyzeResult> =>
 
                     Return a concise summary, actionable tasks, and future events.
 
+                    Detect source type:
+                    - meeting: transcript or meeting notes
+                    - email: email message or email thread
+                    - note: personal/internal note
+                    - other: unknown text
+
+                    Generate a short title for the analysis.
+
                     Rules for summary:
                     - Summarize the main discussion points and decisions.
                     - Keep it concise.

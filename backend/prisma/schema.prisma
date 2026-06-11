@@ -15,6 +15,8 @@ datasource db {
 
 model Analysis {
   id Int @id @default(autoincrement())
+  title String @default("Untitled analysis")
+  sourceType String @default("other")
   inputText String
   summary String
   tasks Json

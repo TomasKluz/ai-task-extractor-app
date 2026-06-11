@@ -11,6 +11,8 @@ export interface Event {
 }
 
 export interface AnalyzeResult {
+    title: string;
+    sourceType: "meeting" | "email" | "note" | "other";
     summary: string;
     tasks: Task[];
     events: Event[];
